@@ -21,7 +21,7 @@ public class ApplicationDbContext : DbContext
             .HasOne(c => c.Endereco)
             .WithOne(e => e.Cliente)
             .HasForeignKey<Endereco>(e => e.ClienteId)
-            .OnDelete(DeleteBehavior.Restrict)
+            .OnDelete(DeleteBehavior.Cascade)
             ;
 
         base.OnModelCreating(modelBuilder);

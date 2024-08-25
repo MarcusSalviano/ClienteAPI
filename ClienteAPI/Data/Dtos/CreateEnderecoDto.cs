@@ -1,18 +1,14 @@
-﻿using Newtonsoft.Json;
+﻿using ClienteAPI.Models;
+using ClienteAPI.Validations;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ClienteAPI.Models;
-
-public class Endereco
+namespace ClienteAPI.Data.Dtos;
+public class CreateEnderecoDto
 {
-    [Key]
-    public int Id { get; set; }
-
     [Required]
     [StringLength(200)]
     public string Rua { get; set; }
-      
+
     [StringLength(10)]
     public string? Numero { get; set; }
 
@@ -34,11 +30,5 @@ public class Endereco
     [Required]
     [StringLength(10)]
     [CepValidation(ErrorMessage = "CEP inválido.")]
-    public string CEP { get; set; }
-
-    [ForeignKey("ClienteId")]
-    public int ClienteId { get; set; }
-
-    [JsonIgnore]
-    public virtual Cliente? Cliente { get; set; }
+    public string CEP { get; set; }   
 }

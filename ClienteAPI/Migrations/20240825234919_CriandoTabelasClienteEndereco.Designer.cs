@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClienteAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240825051109_CriandoTabelasClienteEndereco")]
+    [Migration("20240825234919_CriandoTabelasClienteEndereco")]
     partial class CriandoTabelasClienteEndereco
     {
         /// <inheritdoc />
@@ -85,7 +85,6 @@ namespace ClienteAPI.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Complemento")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("varchar(100)");
 
@@ -95,7 +94,6 @@ namespace ClienteAPI.Migrations
                         .HasColumnType("varchar(2)");
 
                     b.Property<string>("Numero")
-                        .IsRequired()
                         .HasMaxLength(10)
                         .HasColumnType("varchar(10)");
 
@@ -117,7 +115,7 @@ namespace ClienteAPI.Migrations
                     b.HasOne("ClienteAPI.Models.Cliente", "Cliente")
                         .WithOne("Endereco")
                         .HasForeignKey("ClienteAPI.Models.Endereco", "ClienteId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Cliente");

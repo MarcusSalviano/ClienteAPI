@@ -17,12 +17,12 @@ public class CreateClienteDto
     [CpfValidation(ErrorMessage = "CPF inválido.")]
     public string CPF { get; set; }
 
-    [Required(ErrorMessage = "O e-mail é obrigatório")]
+    [Required]
     public string Email { get; set; }
 
-    [Required(ErrorMessage = "O telefone é obrigatório")]
+    [Required]
     public string Telefone { get; set; }
 
     [Required]
-    public virtual Endereco Endereco { get; set; }
+    public CreateEnderecoDto Endereco { get; set; }
 }
