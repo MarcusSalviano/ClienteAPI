@@ -1,0 +1,40 @@
+[
+  {
+    "ContainingType": "ClienteAPI.Controllers.ClienteController",
+    "Method": "AdicionaCliente",
+    "RelativePath": "Cliente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cliente",
+        "Type": "ClienteAPI.Models.Cliente",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Void",
+        "MediaTypes": [],
+        "StatusCode": 201
+      }
+    ]
+  },
+  {
+    "ContainingType": "ClienteAPI.Controllers.ClienteController",
+    "Method": "RecuperaClientePorId",
+    "RelativePath": "Cliente/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
