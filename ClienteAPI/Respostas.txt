@@ -1,0 +1,14 @@
+1. A solução deve ser disponibilizada em Cloud ou On-premise?
+On-premise
+
+2. Considerando a participação de 4 pessoas técnicas para o desenvolvimento dessa solução, responda qual ferramenta acreditas ser apropriada para o controle de tarefas da equipe, a ferramenta é ágil?
+Seriam ferramentas ágeis. SCRUM para realizar a divisão da atividades e organização das tarefas para as entregas e Kanban para organização do andamento das atividades.
+
+3. Você se sente capaz de liderar esta equipe? Por quê?
+Não no momento pela parte técnica pois minha expertise não é C#. Mas pela parte gerencial e experiência de atuação na área, sim.
+
+4. Se pudesse sugerir uma melhoria, mudança ou oportunidade. O que seria?
+-
+
+5. Acha válido esse desafio para o processo que está participando?
+Sim. Engloba tomada de decisão arquitetural e implementação até a parte de devops.
