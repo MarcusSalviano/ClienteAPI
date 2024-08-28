@@ -482,3 +482,8 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+ClienteAPI/bin/
+ClienteAPI/obj/
+
+dos2unix.exe
