@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ClienteAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240825234919_CriandoTabelasClienteEndereco")]
+    [Migration("20240827124926_CriandoTabelasClienteEndereco")]
     partial class CriandoTabelasClienteEndereco
     {
         /// <inheritdoc />
