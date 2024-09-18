@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 namespace ClienteAPI.Data.Dtos;
 public class CreateClienteDto
 {
-    [Required(ErrorMessage = "O nome do filme é obrigatório")]
+    [Required(ErrorMessage = "O nome é obrigatório")]
     [MaxLength(100, ErrorMessage = "O nome não pode exceder 100 caracteres")]
     public string Nome { get; set; }
 
