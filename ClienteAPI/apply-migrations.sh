@@ -1,12 +1,11 @@
-#!/bin/bash
-
 set -e
-run_cmd="dotnet ClienteAPI.dll"
 
-until dotnet ef database update; do
->&2 echo "MySQL is starting up"
-sleep 1
+# Esperar até que o MySQL esteja pronto
+echo "Aguardando MySQL..."
+ until dotnet ef database update --no-build; do
+  >&2 echo "MySQL não está pronto. Tentando novamente em 5 segundos..."
+  sleep 5
 done
 
->&2 echo "MySQL is up - executing command"
-exec $run_cmd
+echo "Migrações aplicadas com sucesso. Iniciando a aplicação..."
+exec dotnet ClienteAPI.dll
