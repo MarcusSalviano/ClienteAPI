@@ -26,10 +26,7 @@ Este é um projeto de uma solução on-premise para fazer o cadastro e busca de 
 - CEP é validado na API do serviço https://viacep.com.br/
 
 ### Banco de Dados (Migrations)
-- É necessário executar o comando abaixo dentro do container da aplicação na primeira que usar para aplicação das migrations.
-```bash
-dotnet ef database update --no-build 
-```
+- As migrations são executadas ao subir os serviços.
 
 ## ClienteAPI Service Endpoints
 
